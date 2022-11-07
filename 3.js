@@ -1,14 +1,21 @@
 function createIterable(num1, num2) {
-  if (typeof num1 === 'number' && typeof num2 === 'number' && num1 <= num2) {
-    let array = [];
-    while (num1 <= num2) {
-      array.push(num1);
-      num1++;
-    }
-    return array;
-  } else {
-    throw new Error('error');
+  if (typeof num1 !== 'number' || typeof num2 !== 'number' || num1 >= num2) {
+    throw new Error();
   }
+  const newObject = {};
+  newObject[Symbol.iterator] = function () {
+    let n = num1;
+    done = false;
+    return {
+      next() {
+        n = num1;
+        num1 += 1;
+        if (n > num2) {
+          done = true;
+        }
+        return { value: n, done: done };
+      },
+    };
+  };
+  return newObject;
 }
-
-const iterable = createIterable(1, 4);
