@@ -1,7 +1,7 @@
 function selectFromInterval(arr, firstNumber, secondNumber) {
   let result = [];
   if (!Array.isArray(arr) || arr.some((el) => typeof el !== 'number')) {
-    throw new Error('please, pass the array of numbers as the first argument');
+    throw new Error();
   }
 
   if (firstNumber <= secondNumber) {
