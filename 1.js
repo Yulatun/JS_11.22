@@ -1,6 +1,6 @@
 function makeDeepCopy(obj) {
   if (typeof obj !== 'object') {
-    throw new Error('please, pass the object');
+    throw new Error();
   } else {
     let value;
     let key;
@@ -17,5 +17,3 @@ function makeDeepCopy(obj) {
     return copiedObject;
   }
 }
-
-
