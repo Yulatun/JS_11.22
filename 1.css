@@ -1,0 +1,26 @@
+.box {
+  height: 400px;
+  width: 350px;
+  border: 1px;
+  background-color: #72a0c0;
+  padding: 5%;
+  border-radius: 5%;
+}
+.button {
+  border-radius: 10%;
+  background-color: #89cff0;
+}
+.buttonsBlock {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-template-rows: repeat(5, 40%);
+  gap: 5%;
+}
+
+.screen {
+  width: 93%;
+  height: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 10%;
+}
