@@ -180,12 +180,6 @@ function pressToOpposite() {
   ) {
     number2 = '-' + number2;
     onDisplay(number2);
-  } else if (
-    operator !== undefined &&
-    number !== undefined &&
-    number2 === undefined
-  ) {
-    //  здесь должен быть еррор потому что такая последовательность:  (5)(*)(/+/-) не оч
   }
 }
 
@@ -207,6 +201,5 @@ function Del() {
   ) {
     number2 = number2.slice(0, -1);
     onDisplay(number2);
-  } else {
-  }
+  } 
 }
